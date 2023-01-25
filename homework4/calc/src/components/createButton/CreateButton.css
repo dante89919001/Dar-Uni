@@ -1,0 +1,67 @@
+
+.btn{
+    background-color: rgb(163, 161, 161);
+    border-radius:50%;
+    width: 70px;
+    height: 70px;
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .btn:hover{
+    background-color: rgb(210, 207, 207);
+  }
+  .equals{
+   width: 250px;
+  
+  }
+  .zero{
+    width: 170px;
+  
+  }
+  .num{
+    background-color:rgb(100, 99, 99)
+  }
+  .bg-or{
+    background-color:orange
+  }
+  .bg-or:hover{
+    background-color:rgb(243, 196, 107)
+  }
+  @media (max-width: 400px){
+    .btn{
+        width: 60px;
+        height: 60px;
+        padding: 15px;
+  
+  
+    }
+    .equals{
+        width: 200px;
+     
+     }
+     .zero{
+         width: 150px;
+     
+     }
+  } 
+  @media (max-width: 320px){
+    .btn{
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        margin: 5px;
+  
+    }
+    .equals{
+        width: 200px;
+     
+     }
+     .zero{
+         width: 150px;
+     
+     }
+  } 

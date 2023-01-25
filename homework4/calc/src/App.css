@@ -1,0 +1,45 @@
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  .App{
+      align-items: center;
+      display: flex;
+      height: 100vh;
+  }
+
+.calc{
+      max-width: 400px;
+      margin: 0 auto;
+      background-color:black;
+      border-radius:5%;
+      
+      padding: 10px;
+      
+}
+.calc-screen {
+ 
+
+      display: flex;
+      justify-content: right;
+      margin: 20px;
+      padding: 20px;
+      color: white;
+      font-size: 1.5rem
+}
+.calc-screen > p {
+  display:flex;
+  align-items: end;
+  justify-items: end;
+  height: 100px;
+  font-size: 2rem ;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
