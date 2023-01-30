@@ -1,0 +1,17 @@
+.FormInput__formControl {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  align-items:center;
+  margin: 0 auto;
+  padding: 5px;
+ 
+}
+
+.FormInput__input {
+  padding: 4px 8px;
+}
+
+.FormInput__label {
+  margin-bottom: 4px;
+}
