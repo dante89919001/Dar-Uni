@@ -104,6 +104,7 @@ function App() {
         label={'SecondNumber'}
         name="SecondNumber"
         type='number'
+        placeholder='Введите число'
         onChange={handleFormChange('secondNumber')}
         value={formData.secondNumber}
       />
