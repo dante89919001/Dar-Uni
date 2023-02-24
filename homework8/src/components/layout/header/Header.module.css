@@ -1,0 +1,21 @@
+.header{
+    height: 80px;
+    background-color: #2596be;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.profile_info{
+    color: white;
+    padding: 2rem;
+    font-size: 18px;
+}
+.AlertsMessage{
+    margin: 0;
+    color: white;
+    font-size: 18px ;
+    padding: 2rem;
+
+    align-items: center;
+    display: flex;
+}
