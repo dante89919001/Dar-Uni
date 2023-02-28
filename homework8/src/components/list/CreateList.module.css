@@ -1,0 +1,17 @@
+.listActive{
+    text-decoration: none;
+
+}
+.list{
+    text-decoration: line-through;
+;
+    background-color: beige;
+}
+li{
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+    list-style-type: none;
+    cursor: pointer;
+    width: 500px;
+}
