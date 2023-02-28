@@ -21,8 +21,8 @@ import { AlertsContext, AlertsContextProvider } from './providers/AlertContext';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<Login />} />
-      <Route path="/alert" element={<AlertsPage />} />
+      <Route path="/" element={<AlertsPage />} />
+      <Route path="/Login" element={<Login />} />
     </>
   )
 );
