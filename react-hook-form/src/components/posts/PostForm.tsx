@@ -21,12 +21,14 @@ export const PostForm: React.FC<Props> = ({ initialValues, isLoading, onSubmit }
     // register,
     control,
     handleSubmit,
-    formState:{ errors } 
-  } = useForm<PostFormValues>({ defaultValues });
+    reset,
+    formState:{ errors , isValid } 
+  } = useForm<PostFormValues>({ defaultValues, mode:"all"} );
   const authorValue = useWatch({ name: "userId", control });
 
   const handleSuccess = (values: PostFormValues) => {
-    onSubmit(values)
+    onSubmit(values);
+    reset();
   };
 
   return (
@@ -35,20 +37,21 @@ export const PostForm: React.FC<Props> = ({ initialValues, isLoading, onSubmit }
       <Controller
         control={control}
         name="title"
+        
         rules={{
           required: true,
           maxLength: {
             value: 10,
             message: "Max length is 10"
           },  pattern: {
-            value: /^[A-Za-z]/,
+            value: /^[A-Za-zА-Яа-я]/,
             message: "Name cannot start with a number"
           },
           
          }} 
 
         render={({ field: { onChange, value, name } }) => (
-          <FormInput label="Title" value={value} name={name} onChange={onChange} />
+          <FormInput label="Title" value={value} name={name} onChange={onChange}/>
         )}
       />
           {errors.title?.message}
@@ -64,12 +67,12 @@ export const PostForm: React.FC<Props> = ({ initialValues, isLoading, onSubmit }
           }
          }} 
          
-        render={({ field: { onChange, value, name } }) => (
+        render={({ field: { onChange , value, name } }) => (
           <FormInput label="Body" value={value} name={name} onChange={onChange}  />
         )}
       />
       {<p role="alert">{errors.body?.message}</p>}    
-      {errors.title?.type === 'required' && <p role="alert">Body is required</p>}    
+      {errors.body?.type === 'required' && <p role="alert">Body is required</p>}    
       <Controller
         control={control}
         name="userId"
@@ -92,7 +95,7 @@ export const PostForm: React.FC<Props> = ({ initialValues, isLoading, onSubmit }
       />
       {<p role="alert">{errors.userId?.message}</p>}   
       {errors.userId?.type === 'required' && <p role="alert">userId is required</p>}  
-      <button type="submit" disabled={isLoading}>
+      <button type="submit" disabled={!isValid}>
         Save
       </button>
     </form>

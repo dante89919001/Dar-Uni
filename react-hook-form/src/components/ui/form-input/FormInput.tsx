@@ -9,6 +9,7 @@ type Props = {
   placeholder?: string;
   value: string;
   onChange: (v: ChangeEvent) => void;
+
 };
 
 export const FormInput: React.FC<Props> = ({
